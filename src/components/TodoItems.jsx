@@ -1,4 +1,4 @@
-function TodoItems(props) {
+function TodoItem(props) {
   const { name } = props;
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -17,4 +17,4 @@ function TodoItems(props) {
   );
 }
 
-export default TodoItems;
+export default TodoItem;
