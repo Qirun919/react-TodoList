@@ -1,11 +1,11 @@
-import TodoItems from "./TodoItems";
+import TodoItem from "./TodoItem";
 
 function TodoList() {
   return (
     <ul className="list-group">
-      <TodoItems name="Task 1" />
-      <TodoItems name="Task 2" />
-      <TodoItems name="Task 3" />
+      <TodoItem name="Task 1" isCompleted={true}/>
+      <TodoItem name="Task 2" isCompleted={false}/>
+      <TodoItem name="Task 3" isCompleted={false}/>
     </ul>
   );
 }
