@@ -1,12 +1,21 @@
 import TodoItem from "./TodoItem";
 
 function TodoList(props) {
-  const { list } = props;
+  const { todos, onDelete, onCompleted } = props;
   return (
     <ul className="list-group">
-      {list.map((todo) => {
-        const { name, id } = todo;
-        return <TodoItem key={id} name={name} isCompleted={false} />;
+      {todos.map((item) => {
+        const { id, label, isCompleted } = item;
+        return (
+          <TodoItem
+            key={id}
+            id={id}
+            label={label}
+            isCompleted={isCompleted}
+            onDelete={onDelete}
+            onCompleted={onCompleted}
+          />
+        );
       })}
     </ul>
   );
